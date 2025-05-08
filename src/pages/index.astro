@@ -1,111 +1,102 @@
----
----
-
-
+<!DOCTYPE html>
 <html lang="fi">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Apurapalvelut – Ikkunanpesua luotettavasti</title>
-    <style>
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f0f8ff;
-        color: #002b5c;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apura Palvelut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+    header {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    header img {
+      height: 60px;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .hero {
+      background: url('/mnt/data/6254356f-b05f-4ea0-8e4b-fd4b50035abf.png') no-repeat center center;
+      background-size: cover;
+      height: 80vh;
+      position: relative;
+    }
+    .form-box {
+      background: white;
+      max-width: 500px;
+      padding: 30px;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .form-box h1 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .form-box button, .form-box .option {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #f4f2ee;
+    }
+    .form-box button {
+      background-color: #eee;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .section-img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/mnt/data/7447f6e7-f7d7-4774-b721-34baac44ac99.png" alt="Apura Palvelut Logo">
+    <div class="tagline">- Kun vain paras kelpaa.</div>
+  </header>
 
-      header {
-        background-color: #0077cc;
-        color: white;
-        padding: 2rem 1rem 1rem;
-        text-align: center;
-      }
+  <div class="hero">
+    <div class="form-box">
+      <h1>Pyydä nyt maksuton tarjous ikkunoiden pesusta!</h1>
+      <div>Talotyyppi *</div>
+      <div class="option">Omakotitalo</div>
+      <div class="option">Rivitalo/Paritalo</div>
+      <div class="option">Kerrostalo</div>
+      <button>Seuraava</button>
+    </div>
+  </div>
 
-      header img {
-        width: 120px;
-        height: auto;
-        margin-bottom: 0.5rem;
-      }
-
-      header h1 {
-        margin: 0.3rem 0 0.2rem;
-        font-size: 2.2rem;
-      }
-
-      header p.slogan {
-        font-size: 1.2rem;
-        font-style: italic;
-        margin: 0;
-        color: #d0eaff;
-      }
-
-      section {
-        padding: 2rem;
-        max-width: 800px;
-        margin: auto;
-      }
-
-      h2 {
-        color: #004c99;
-      }
-
-      .highlight {
-        font-weight: bold;
-        color: #0077cc;
-      }
-
-      ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      li::before {
-        content: "✔️ ";
-        color: #0077cc;
-      }
-
-      footer {
-        background-color: #002b5c;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-        margin-top: 2rem;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-
-img src="/logo.png" alt="apura"
-      
-      <h1>Apurapalvelut</h1>
-      <p class="slogan">Kun vain paras kelpaa</p>
-    </header>
-
-    <section>
-      <h2>Palvelumme</h2>
-      <p>
-        Tarjoamme ammattitaitoista ikkunanpesua yksityisille ja yrityksille.
-        Käytämme ympäristöystävällisiä aineita ja takaamme kirkkaat tulokset.
-      </p>
-
-      <h2>Yhteystiedot</h2>
-      <p>
-        📞 <span class="highlight">044 978 1824</span><br />
-        ✉️ <a href="mailto:apurapalvelut@gmail.com">apurapalvelut@gmail.com</a>
-      </p>
-
-      <h2>Miksi valita meidät?</h2>
-      <ul>
-        <li>Yli 200 tyytyväistä asiakasta</li>
-        <li>Nopea ja siisti työnjälki</li>
-        <li>Luotettava ja ystävällinen palvelu</li>
-      </ul>
-    </section>
-
-    <footer>
-      &copy; 2025 Apurapalvelut – Kaikki oikeudet pidätetään
-    </footer>
-  </body>
+  <section>
+    <h2>Puhdasta jälkeä kotitalouksille, yrityksille ja taloyhtiöille</h2>
+    <p>
+      Apura Palvelut tarjoaa ammattitaitoista ikkunanpesua Espoossa,
+      Kauniaisissa, Helsingissä ja Hangossa. Luotettava palvelu, joustava aikataulu ja huolellinen työnjälki takaavat tyytyväisyytesi.
+    </p>
+    <img src="/mnt/data/6254356f-b05f-4ea0-8e4b-fd4b50035abf.png" alt="Window cleaning" class="section-img" />
+  </section>
+</body>
 </html>
