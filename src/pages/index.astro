@@ -11,16 +11,16 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-color: #fff;
-      color: #000;
+      background-color: #f0f8ff;
+      color: #003366;
     }
     header {
-      background-color: white;
+      background-color: #003366;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 20px 40px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     header img {
       height: 60px;
@@ -28,7 +28,6 @@
     .tagline {
       font-size: 1.2rem;
       font-weight: bold;
-      color: #333;
     }
     .hero {
       background: url('/mnt/data/6254356f-b05f-4ea0-8e4b-fd4b50035abf.png') no-repeat center center;
@@ -49,18 +48,39 @@
     .form-box h1 {
       font-size: 1.5rem;
       margin-bottom: 20px;
+      color: #003366;
     }
-    .form-box button, .form-box .option {
+    .form-box label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    .form-box input, .form-box select, .form-box textarea {
       width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      font-size: 1rem;
+      padding: 10px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
-      border-radius: 10px;
-      background: #f4f2ee;
+      border-radius: 5px;
+      font-size: 1rem;
     }
     .form-box button {
-      background-color: #eee;
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background: #003366;
+      color: white;
+      font-weight: bold;
+    }
+    nav {
+      background-color: #002244;
+      padding: 10px 40px;
+      text-align: right;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
       font-weight: bold;
     }
     section {
@@ -71,32 +91,85 @@
       max-width: 100%;
       height: auto;
     }
+    .hidden-contact {
+      display: none;
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+    }
+    .show {
+      display: block;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
   </style>
+  <script>
+    function toggleContact() {
+      const box = document.getElementById('contact-box');
+      box.classList.toggle('show');
+    }
+  </script>
 </head>
 <body>
   <header>
     <img src="/mnt/data/7447f6e7-f7d7-4774-b721-34baac44ac99.png" alt="Apura Palvelut Logo">
     <div class="tagline">- Kun vain paras kelpaa.</div>
   </header>
+  <nav>
+    <a href="#" onclick="toggleContact()">Ota yhteyttä</a>
+  </nav>
 
   <div class="hero">
     <div class="form-box">
       <h1>Pyydä nyt maksuton tarjous ikkunoiden pesusta!</h1>
-      <div>Talotyyppi *</div>
-      <div class="option">Omakotitalo</div>
-      <div class="option">Rivitalo/Paritalo</div>
-      <div class="option">Kerrostalo</div>
-      <button>Seuraava</button>
+      <form>
+        <label for="houseType">Talotyyppi *</label>
+        <select id="houseType" name="houseType" required>
+          <option value="omakotitalo">Omakotitalo</option>
+          <option value="rivitalo">Rivitalo / Paritalo</option>
+          <option value="kerrostalo">Kerrostalo</option>
+        </select>
+
+        <label for="address">Osoite</label>
+        <input type="text" id="address" name="address" placeholder="Kirjoita osoite" required>
+
+        <label for="size">Asunnon koko (m²)</label>
+        <input type="number" id="size" name="size" placeholder="Esim. 120" required>
+
+        <label for="notes">Lisätiedot</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Kirjoita mahdollisia lisätietoja..."></textarea>
+
+        <button type="submit">Lähetä tarjouspyyntö</button>
+      </form>
     </div>
   </div>
 
   <section>
+    <h2>Miksi valita meidät?</h2>
+    <p>Yli 200 tyytyväistä asiakasta ei voi olla väärässä – Apura Palvelut tarjoaa siistiä työnjälkeä, joustavaa aikataulua ja luotettavaa palvelua, joka takaa tyytyväisyytesi.</p>
+  </section>
+
+  <section>
     <h2>Puhdasta jälkeä kotitalouksille, yrityksille ja taloyhtiöille</h2>
     <p>
-      Apura Palvelut tarjoaa ammattitaitoista ikkunanpesua Espoossa,
+      Apura Palvelut tarjoaa ammattitaitoista ikkunanpesua, sadevesikourujen puhdistusta ja aurinkopaneeleiden puhdistusta Espoossa,
       Kauniaisissa, Helsingissä ja Hangossa. Luotettava palvelu, joustava aikataulu ja huolellinen työnjälki takaavat tyytyväisyytesi.
     </p>
     <img src="/mnt/data/6254356f-b05f-4ea0-8e4b-fd4b50035abf.png" alt="Window cleaning" class="section-img" />
   </section>
+
+  <div id="contact-box" class="hidden-contact">
+    <h3>Yhteystiedot</h3>
+    <p>Puhelin: 044 978 1824</p>
+    <p>Sähköposti: apurapalvelut@gmail.com</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Apura Palvelut</p>
+  </footer>
 </body>
 </html>
