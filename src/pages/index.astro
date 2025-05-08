@@ -8,7 +8,7 @@
     <title>Apurapalvelut – Ikkunanpesua luotettavasti</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f0f8ff;
         color: #002b5c;
         margin: 0;
@@ -18,8 +18,26 @@
       header {
         background-color: #0077cc;
         color: white;
-        padding: 2rem;
+        padding: 2rem 1rem 1rem;
         text-align: center;
+      }
+
+      header img {
+        width: 120px;
+        height: auto;
+        margin-bottom: 0.5rem;
+      }
+
+      header h1 {
+        margin: 0.3rem 0 0.2rem;
+        font-size: 2.2rem;
+      }
+
+      header p.slogan {
+        font-size: 1.2rem;
+        font-style: italic;
+        margin: 0;
+        color: #d0eaff;
       }
 
       section {
@@ -28,8 +46,22 @@
         margin: auto;
       }
 
+      h2 {
+        color: #004c99;
+      }
+
       .highlight {
         font-weight: bold;
+        color: #0077cc;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li::before {
+        content: "✔️ ";
         color: #0077cc;
       }
 
@@ -44,8 +76,10 @@
   </head>
   <body>
     <header>
+      
+      
       <h1>Apurapalvelut</h1>
-      <p>Luotettavaa ikkunanpesua – yli 200 tyytyväistä asiakasta!</p>
+      <p class="slogan">Kun vain paras kelpaa</p>
     </header>
 
     <section>
@@ -63,9 +97,9 @@
 
       <h2>Miksi valita meidät?</h2>
       <ul>
-        <li>✔️ Yli 200 tyytyväistä asiakasta</li>
-        <li>✔️ Nopea ja siisti työnjälki</li>
-        <li>✔️ Luotettava ja ystävällinen palvelu</li>
+        <li>Yli 200 tyytyväistä asiakasta</li>
+        <li>Nopea ja siisti työnjälki</li>
+        <li>Luotettava ja ystävällinen palvelu</li>
       </ul>
     </section>
 
