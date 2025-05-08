@@ -1,21 +1,76 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
-</Layout>
+
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Apurapalvelut – Ikkunanpesua luotettavasti</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: #002b5c;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #0077cc;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .highlight {
+        font-weight: bold;
+        color: #0077cc;
+      }
+
+      footer {
+        background-color: #002b5c;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Apurapalvelut</h1>
+      <p>Luotettavaa ikkunanpesua – yli 200 tyytyväistä asiakasta!</p>
+    </header>
+
+    <section>
+      <h2>Palvelumme</h2>
+      <p>
+        Tarjoamme ammattitaitoista ikkunanpesua yksityisille ja yrityksille.
+        Käytämme ympäristöystävällisiä aineita ja takaamme kirkkaat tulokset.
+      </p>
+
+      <h2>Yhteystiedot</h2>
+      <p>
+        📞 <span class="highlight">044 978 1824</span><br />
+        ✉️ <a href="mailto:apurapalvelut@gmail.com">apurapalvelut@gmail.com</a>
+      </p>
+
+      <h2>Miksi valita meidät?</h2>
+      <ul>
+        <li>✔️ Yli 200 tyytyväistä asiakasta</li>
+        <li>✔️ Nopea ja siisti työnjälki</li>
+        <li>✔️ Luotettava ja ystävällinen palvelu</li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; 2025 Apurapalvelut – Kaikki oikeudet pidätetään
+    </footer>
+  </body>
+</html>
