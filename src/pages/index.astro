@@ -4,172 +4,113 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apura Palvelut</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f6f9;
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f0f8ff;
-      color: #003366;
+      padding: 0;
+      color: #333;
     }
     header {
-      background-color: #003366;
+      background-color: #005bb5;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
+      padding: 2rem;
+      text-align: center;
     }
     header img {
-      height: 60px;
+      max-width: 180px;
+      margin-bottom: 1rem;
     }
-    .tagline {
-      font-size: 1.2rem;
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    label {
       font-weight: bold;
-    }
-    .hero {
-      background: url('/mnt/data/6254356f-b05f-4ea0-8e4b-fd4b50035abf.png') no-repeat center center;
-      background-size: cover;
-      height: 80vh;
-      position: relative;
-    }
-    .form-box {
-      background: white;
-      max-width: 500px;
-      padding: 30px;
-      position: absolute;
-      top: 20%;
-      left: 10%;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .form-box h1 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: #003366;
-    }
-    .form-box label {
       display: block;
-      margin: 10px 0 5px;
+      margin-top: 1rem;
     }
-    .form-box input, .form-box select, .form-box textarea {
+    input, textarea {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 5px;
-      font-size: 1rem;
     }
-    .form-box button {
-      width: 100%;
-      padding: 15px;
-      font-size: 1rem;
+    input[type="submit"] {
+      background-color: #005bb5;
+      color: white;
       border: none;
-      border-radius: 10px;
-      background: #003366;
-      color: white;
-      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1.5rem;
     }
-    nav {
-      background-color: #002244;
-      padding: 10px 40px;
-      text-align: right;
+    input[type="submit"]:hover {
+      background-color: #003f87;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-    section {
-      padding: 60px 40px;
-      text-align: center;
-    }
-    .section-img {
-      max-width: 100%;
-      height: auto;
-    }
-    .hidden-contact {
-      display: none;
-      background-color: #003366;
-      color: white;
-      padding: 20px;
-    }
-    .show {
-      display: block;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    .info-box {
+      background-color: #e8f0fe;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #005bb5;
+      border-radius: 6px;
     }
   </style>
-  <script>
-    function toggleContact() {
-      const box = document.getElementById('contact-box');
-      box.classList.toggle('show');
-    }
-  </script>
 </head>
 <body>
-  <header>
-    <img src="/mnt/data/7447f6e7-f7d7-4774-b721-34baac44ac99.png" alt="Apura Palvelut Logo">
-    <div class="tagline">- Kun vain paras kelpaa.</div>
-  </header>
-  <nav>
-    <a href="mailto:aaro.heikkila@icloud.com" onclick="toggleContact()">Ota yhteyttä</a>
-  </nav>
 
-  <div class="hero">
-    <div class="form-box">
-      <h1>Pyydä nyt maksuton tarjous ikkunoiden pesusta!</h1>
-      <form>
-        <label for="houseType">Talotyyppi *</label>
-        <select id="houseType" name="houseType" required>
-          <option value="omakotitalo">Omakotitalo</option>
-          <option value="rivitalo">Rivitalo / Paritalo</option>
-          <option value="kerrostalo">Kerrostalo</option>
-        </select>
+<header>
+  <!-- Korvaa src omalla logosi URL-osoitteella tai polulla esim. /images/apura-logo.png -->
+  <img src="https://example.com/apura-logo.png" alt="Apura Palvelut logo" />
+  <h1>Apura Palvelut</h1>
+  <p>Ikkunanpesua luotettavasti ja vaivattomasti</p>
+</header>
 
-        <label for="address">Osoite</label>
-        <input type="text" id="address" name="address" placeholder="Kirjoita osoite" required>
-
-        <label for="size">Asunnon koko (m²)</label>
-        <input type="number" id="size" name="size" placeholder="Esim. 120" required>
-
-        <label for="notes">Lisätiedot</label>
-        <textarea id="notes" name="notes" rows="4" placeholder="Kirjoita mahdollisia lisätietoja..."></textarea>
-
-        <button type="submit">Lähetä tarjouspyyntö</button>
-      </form>
-    </div>
+<main>
+  <div class="info-box">
+    <h2>Miksi valita Apura Palvelut?</h2>
+    <ul>
+      <li>✅ Yli 200 tyytyväistä asiakasta</li>
+      <li>🏠 Myös korkeiden ikkunoiden pesu</li>
+      <li>💰 Aina urakkaperusteinen hinnoittelu – ilmainen arvio</li>
+      <li>🧾 Työstä saa kotitalousvähennyksen</li>
+    </ul>
   </div>
 
-  <section>
-    <h2>Miksi valita meidät?</h2>
-    <p>Yli 200 tyytyväistä asiakasta ei voi olla väärässä – Apura Palvelut tarjoaa siistiä työnjälkeä, joustavaa aikataulua ja luotettavaa palvelua, joka takaa tyytyväisyytesi.</p>
-  </section>
+  <h2>Pyydä maksuton arvio</h2>
+  <form action="https://formsubmit.co/apurapalvelut@gmail.com" method="POST">
+    <label for="nimi">Nimi:</label>
+    <input type="text" id="nimi" name="Nimi" required>
 
-  <section>
-    <h2>Puhdasta jälkeä kotitalouksille, yrityksille ja taloyhtiöille</h2>
-    <p>
-      Apura Palvelut tarjoaa ammattitaitoista ikkunanpesua, sadevesikourujen puhdistusta ja aurinkopaneeleiden puhdistusta Espoossa,
-      Kauniaisissa, Helsingissä ja Hangossa. Luotettava palvelu, joustava aikataulu ja huolellinen työnjälki takaavat tyytyväisyytesi.
-    </p>
-    <img src="/mnt/data/6254356f-b05f-4ea0-8e4b-fd4b50035abf.png" alt="Window cleaning" class="section-img" />
-  </section>
+    <label for="email">Sähköposti:</label>
+    <input type="email" id="email" name="Sähköposti" required>
 
-  <div id="contact-box" class="hidden-contact">
-    <h3>Yhteystiedot</h3>
-    <p>Puhelin: 044 978 1824</p>
-    <p>Sähköposti: apurapalvelut@gmail.com</p>
-  </div>
+    <label for="puhelin">Puhelinnumero:</label>
+    <input type="tel" id="puhelin" name="Puhelin" required>
 
-  <footer>
-    <p>© 2025 Apura Palvelut</p>
-  </footer>
+    <label for="ikkunat">Ikkunoiden määrä:</label>
+    <input type="number" id="ikkunat" name="Ikkunoiden määrä" required>
+
+    <label for="viesti">Lisätiedot:</label>
+    <textarea id="viesti" name="Viesti" rows="4"></textarea>
+
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_next" value="https://kiitossivu.com">
+
+    <input type="submit" value="Lähetä tarjouspyyntö">
+  </form>
+
+  <p style="margin-top: 2rem;"><strong>📞 Puhelin:</strong> 040 123 4567</p>
+  <p><strong>📧 Sähköposti:</strong> apurapalvelut@gmail.com</p>
+  <p><strong>Y-tunnus:</strong> 3372786-3</p>
+</main>
+
 </body>
 </html>
