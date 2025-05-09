@@ -1,116 +1,131 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Apura Palvelut</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f3f6f9;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
-      color: #333;
     }
     header {
-      background-color: #005bb5;
-      color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 30px 20px 10px;
+      background-color: #ffffff;
     }
     header img {
-      max-width: 180px;
-      margin-bottom: 1rem;
+      width: 180px;
     }
-    main {
-      max-width: 600px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
+    header p {
+      font-size: 18px;
+      margin: 10px 0 5px;
     }
-    h1, h2 {
-      margin-top: 0;
+    .intro {
+      text-align: center;
+      background-color: #f1f1f1;
+      padding: 30px 20px;
     }
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 1rem;
+    .intro h2 {
+      margin-bottom: 10px;
     }
-    input, textarea {
+    .benefits {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+    .benefits li::before {
+      content: "✅ ";
+    }
+    .form-section {
+      text-align: center;
+      padding: 30px 20px;
+    }
+    form {
+      display: inline-block;
+      text-align: left;
+      max-width: 400px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    form input, form textarea {
       width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 4px;
     }
-    input[type="submit"] {
-      background-color: #005bb5;
+    form button {
+      background-color: #007BFF;
       color: white;
+      padding: 10px 20px;
       border: none;
+      border-radius: 4px;
       cursor: pointer;
-      margin-top: 1.5rem;
     }
-    input[type="submit"]:hover {
-      background-color: #003f87;
-    }
-    .info-box {
-      background-color: #e8f0fe;
-      padding: 1rem;
-      margin-bottom: 2rem;
-      border-left: 4px solid #005bb5;
-      border-radius: 6px;
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <!-- Korvaa src omalla logosi URL-osoitteella tai polulla esim. /images/apura-logo.png -->
-  <img src="https://example.com/apura-logo.png" alt="Apura Palvelut logo" />
-  <h1>Apura Palvelut</h1>
-  <p>Ikkunanpesua luotettavasti ja vaivattomasti</p>
+  <img src="https://i.ibb.co/JwCbQs3q/logo.png" alt="Apura Palvelut logo">
+  <p>puh. 045 123 4567</p>
 </header>
 
-<main>
-  <div class="info-box">
-    <h2>Miksi valita Apura Palvelut?</h2>
-    <ul>
-      <li>✅ Yli 200 tyytyväistä asiakasta</li>
-      <li>🏠 Myös korkeiden ikkunoiden pesu</li>
-      <li>💰 Aina urakkaperusteinen hinnoittelu – ilmainen arvio</li>
-      <li>🧾 Työstä saa kotitalousvähennyksen</li>
-    </ul>
-  </div>
+<section class="intro">
+  <h2>Miksi valita Apura Palvelut?</h2>
+  <p>Laadukasta ikkunanpesua vuosien kokemuksella.</p>
+</section>
 
+<section class="benefits">
+  <ul>
+    <li>Yli 200 tyytyväistä asiakasta</li>
+    <li>Myös korkeiden ikkunoiden pesut</li>
+    <li>Aina urakkaperusteinen hinnoittelu – ilmainen arvio!</li>
+    <li>Työstä kotitalousvähennys</li>
+  </ul>
+</section>
+
+<section class="form-section">
   <h2>Pyydä maksuton arvio</h2>
-  <form action="https://formsubmit.co/apurapalvelut@gmail.com" method="POST">
-    <label for="nimi">Nimi:</label>
-    <input type="text" id="nimi" name="Nimi" required>
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <label>Nimi:</label>
+    <input type="text" name="name" required>
 
-    <label for="email">Sähköposti:</label>
-    <input type="email" id="email" name="Sähköposti" required>
+    <label>Sähköposti:</label>
+    <input type="email" name="email" required>
 
-    <label for="puhelin">Puhelinnumero:</label>
-    <input type="tel" id="puhelin" name="Puhelin" required>
+    <label>Puhelinnumero:</label>
+    <input type="text" name="phone" required>
 
-    <label for="ikkunat">Ikkunoiden määrä:</label>
-    <input type="number" id="ikkunat" name="Ikkunoiden määrä" required>
+    <label>Ikkunoiden määrä:</label>
+    <input type="number" name="windows" required>
 
-    <label for="viesti">Lisätiedot:</label>
-    <textarea id="viesti" name="Viesti" rows="4"></textarea>
+    <label>Lisätietoja:</label>
+    <textarea name="message" rows="4"></textarea>
 
-    <input type="text" name="_honey" style="display:none">
-    <input type="hidden" name="_next" value="https://kiitossivu.com">
-
-    <input type="submit" value="Lähetä tarjouspyyntö">
+    <button type="submit">Lähetä tarjouspyyntö</button>
   </form>
+</section>
 
-  <p style="margin-top: 2rem;"><strong>📞 Puhelin:</strong> 0449781824</p>
-  <p><strong>📧 Sähköposti:</strong> apurapalvelut@gmail.com</p>
-  <p><strong>Y-tunnus:</strong> 3372786-3</p>
-</main>
+<footer>
+  Y-tunnus: 3372786-3 – Ota yhteyttä ja pyydä ilmainen arvio!
+</footer>
 
 </body>
 </html>
